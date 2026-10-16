@@ -1,7 +1,10 @@
 export const siteConfig = {
-	name: 'Engineering Portfolio',
+	name: 'Alexandria Slattery',
+	shortName: 'A. Slattery',
+	role: 'Full Stack Engineer',
+	location: 'Philadelphia, PA',
 	description:
-		'A professional portfolio website template for engineering students.',
+		'Full stack engineer specializing in scalable e-commerce solutions, passionate about problem-solving, building solutions, and leadership.',
 	mainNav: [
 		{
 			title: 'Home',
@@ -28,12 +31,12 @@ export const siteConfig = {
 			href: '/projects',
 		},
 		{
-			title: 'Certificates',
-			href: '/certificates',
+			title: 'Writing',
+			href: '/blog',
 		},
 		{
-			title: 'Blog',
-			href: '/blog',
+			title: 'Gallery',
+			href: '/gallery',
 		},
 		{
 			title: 'Contact',
@@ -41,15 +44,11 @@ export const siteConfig = {
 		},
 	],
 	links: {
-		github: 'https://github.com/yourusername',
-		linkedin: 'https://linkedin.com/in/yourusername',
-		twitter: 'https://twitter.com/yourusername',
-		facebook: 'https://facebook.com/yourusername',
-		instagram: 'https://instagram.com/yourusername',
-		whatsapp: 'https://wa.me/yourphonenumber',
-		email: 'mailto:youremail@example.com',
-		phone: 'tel:+1234567890',
+		github: 'https://github.com/AllieGal',
+		linkedin: 'https://www.linkedin.com/in/alexandria-s-5766a4175/',
+		medium: 'https://medium.com/@cienna.a.slattery',
 	},
+	email: 'alexandriaslattery@gmail.com',
 };
 
 export type Experience = {
@@ -60,73 +59,227 @@ export type Experience = {
 	endDate: string;
 	description: string[];
 	technologies: string[];
+	links?: ProjectLink[];
 };
 
 export const experiences: Experience[] = [
 	{
-		title: 'Engineering Intern',
-		company: 'Tech Company',
-		location: 'City, Country',
-		startDate: 'May 2023',
-		endDate: 'Aug 2023',
+		title: 'Java Developer (Leadership Development Program)',
+		company: 'Abercrombie & Fitch Co. · Discovery Services',
+		location: 'Remote',
+		startDate: 'Jul 2023',
+		endDate: 'Present',
 		description: [
-			'Worked on developing and testing software components for embedded systems',
-			'Collaborated with senior engineers on project planning and execution',
-			'Implemented test procedures for quality assurance',
+			'Lead front-end architecture and development of an internal tool consolidating feature-flag management, replacing a third-party vendor; projected to save ~$250K/year in licensing.',
+			'Engineered event-driven Spring Boot microservices consuming millions of daily e-commerce events via Kafka, monitored with Splunk dashboards and Dynatrace.',
+			'Independently upgraded the legacy Sorting Rules Manager to Java 17 (Spring Boot, Kafka) ahead of its migration to OpenShift.',
+			'Led the team\'s early adoption of Org Owned Quality, an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% DORA metrics adoption and rolled out linting, mutation testing, and CI/CD across repositories.',
+			'Drove AI-assisted development: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide in a high-profile meeting and to the team.',
+			'Lead the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
 		],
-		technologies: ['C++', 'Python', 'MATLAB', 'Git'],
+		technologies: [
+			'Java',
+			'Spring Boot',
+			'Kafka',
+			'React',
+			'TypeScript',
+			'Figma',
+			'PrimeReact',
+			'Vite',
+			'REST APIs',
+			'OpenShift (OCP)',
+		],
 	},
 	{
-		title: 'Research Assistant',
-		company: 'University Lab',
-		location: 'City, Country',
+		title: 'Front-End Developer',
+		company: 'HealthTech Solutions',
+		location: 'Remote',
 		startDate: 'Jan 2023',
-		endDate: 'Apr 2023',
+		endDate: 'Jul 2023',
 		description: [
-			'Assisted in research focusing on advanced materials for mechanical applications',
-			'Conducted literature reviews and compiled research findings',
-			'Performed data analysis and visualization of experimental results',
+			'Independently migrated the MCO-Tracker UI from Pug to a responsive React interface for a web app holding millions of MCO and state-government records, improving performance and user experience.',
+			'Owned front-end architecture and UI/UX, integrating with the Express and MongoDB backend.',
+			'Collaborated with international teams to keep delivery on track.',
 		],
-		technologies: ['MATLAB', 'CAD', 'Data Analysis', 'Python'],
+		technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+	},
+	{
+		title: 'Leadership Development Program Intern',
+		company: 'Abercrombie & Fitch Co. · Infrastructure and Operations',
+		location: 'Columbus, OH',
+		startDate: 'May 2022',
+		endDate: 'Aug 2022',
+		description: [
+			'Designed and built a Python (Tkinter) desktop app that creates ServiceNow asset records via REST API; adopted by the company for IT asset management.',
+			'Shaped the app from employee feedback, streamlining asset management, improving security, and cutting acquisition costs.',
+			'Designed a homepage wireframe aimed at attracting younger buyers.',
+		],
+		technologies: ['Python', 'Tkinter', 'REST APIs', 'ServiceNow', 'Wireframing'],
+	},
+	{
+		title: 'Cellular and Molecular Biology Intern',
+		company: 'University of Pennsylvania · Summer Undergraduate Internship Program',
+		location: 'Remote',
+		startDate: 'Jun 2020',
+		endDate: 'Aug 2020',
+		description: [
+			'Researched genes associated with autism and schizophrenia with Dr. Michael Hart.',
+			'Designed an experimental project examining the effects of dopamine on neural plasticity in roundworms (C. elegans), written up as the research proposal "The Power of the Worm: Examining the Role of Dopamine and Stress in Morphologic Plasticity."',
+		],
+		technologies: ['Research Design', 'Data Analysis'],
+		links: [
+			{
+				label: 'Research Proposal',
+				href: 'https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:80fdc8d1-28ac-3cd5-a9dc-2fbf4ebacacf',
+			},
+			{ label: 'Program', href: 'https://www.med.upenn.edu/idealresearch/suip/' },
+		],
+	},
+	{
+		title: 'Undergraduate Research: Brain Cancer Immunology Intern',
+		company: 'Seattle Children\'s Research Institute',
+		location: 'Seattle, WA',
+		startDate: 'Jun 2019',
+		endDate: 'Aug 2019',
+		description: [
+			'Tested gene expression in macrophages to examine their role in glioblastoma with Dr. Courtney Crane\'s team.',
+			'Presented "Identifying the function of protein VSIG4 as seen in the Tumor Microenvironment of Glioblastoma" at the 19th Annual Berea Undergraduate Research Symposium.',
+		],
+		technologies: ['Gene Expression Analysis', 'Data Analysis', 'Scientific Presentation'],
+		links: [
+			{ label: 'Presentation', href: 'https://youtu.be/fiDlwpctyDs' },
+			{
+				label: 'Program',
+				href: 'https://neurosurgery.uw.edu/education/summer-student-programs/student-presentations',
+			},
+		],
 	},
 ];
 
+export type ProjectLink = {
+	label: string;
+	href: string;
+};
+
 export type Project = {
 	title: string;
+	context: string;
 	description: string;
-	image: string;
 	tags: string[];
-	link?: string;
-	repo?: string;
+	links?: ProjectLink[];
 };
 
 export const projects: Project[] = [
 	{
-		title: 'Smart Home Automation System',
+		title: 'Feature-Flag Management Tool',
+		context: 'Abercrombie & Fitch Co. · 2025 – present',
 		description:
-			'Designed and implemented a smart home automation system using IoT technologies to control lighting, temperature, and security features.',
-		image: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg',
-		tags: ['IoT', 'Arduino', 'C++', 'Mobile App'],
-		link: '#',
-		repo: '#',
+			'Leading front-end architecture and development of an internal tool consolidating feature-flag management and replacing a third-party vendor; projected to save ~$250K/year in licensing.',
+		tags: ['React', 'TypeScript', 'PrimeReact', 'Vite', 'REST APIs', 'Figma'],
 	},
 	{
-		title: 'Structural Analysis Software',
+		title: 'Team AI Enablement',
+		context: 'Abercrombie & Fitch Co. · 2025 – present',
 		description:
-			'Developed software for structural analysis of beams and trusses using numerical methods and visualization techniques.',
-		image: 'https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg',
-		tags: ['MATLAB', 'Python', 'FEA', 'Structural Engineering'],
-		link: '#',
-		repo: '#',
+			'Drove AI-assisted development on my team: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide.',
+		tags: ['GitHub Copilot', 'Cursor', 'Figma AI', 'Technical Training'],
 	},
 	{
-		title: 'Renewable Energy Monitoring',
+		title: 'Dataload Consumer',
+		context: 'Abercrombie & Fitch Co. · 2023 – 2024',
 		description:
-			'Created a system to monitor and analyze performance of solar panels and wind turbines for optimal energy production.',
-		image: 'https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg',
-		tags: ['Data Analysis', 'IoT', 'Renewable Energy', 'Visualization'],
-		link: '#',
-		repo: '#',
+			'Event-driven Spring Boot microservices consuming millions of daily e-commerce events via Kafka and delivering them to downstream systems, monitored with Splunk dashboards and Dynatrace.',
+		tags: ['Java', 'Spring Boot', 'Kafka', 'Splunk', 'Dynatrace'],
+	},
+	{
+		title: 'AI Harness Adoption',
+		context: 'Abercrombie & Fitch Co. · 2026',
+		description:
+			'Leading the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
+		tags: ['AI Tooling', 'Cursor', 'Technical Planning'],
+	},
+	{
+		title: 'Org Owned Quality Adoption',
+		context: 'Abercrombie & Fitch Co. · 2024 – 2026',
+		description:
+			'Led the team\'s early adoption of an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% DORA metrics adoption and rolled out linting, mutation testing, and CI/CD across repositories.',
+		tags: ['DORA Metrics', 'CI/CD', 'Mutation Testing', 'Linting'],
+	},
+	{
+		title: 'Sorting Rules Manager Java 17 Upgrade',
+		context: 'Abercrombie & Fitch Co. · 2024',
+		description:
+			'Independently upgraded the legacy Sorting Rules Manager to Java 17 (Spring Boot, Kafka) ahead of its migration to OpenShift.',
+		tags: ['Java 17', 'Spring Boot', 'Kafka', 'CI/CD', 'OpenShift'],
+	},
+	{
+		title: 'MCO-Tracker',
+		context: 'HealthTech Solutions · 2023',
+		description:
+			'Independently migrated the UI from Pug to a responsive React interface for a web app holding millions of MCO and state-government records, improving performance and user experience.',
+		tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+	},
+	{
+		title: 'Asset Tagger',
+		context: 'Abercrombie & Fitch Co. internship · 2022',
+		description:
+			'A desktop app that creates ServiceNow asset records during laptop setup through the REST API. Sole designer and developer; adopted by the company for IT asset management.',
+		tags: ['Python', 'Tkinter', 'REST APIs', 'ServiceNow'],
+		links: [
+			{ label: 'Video', href: 'https://youtu.be/6DF0tZZo1xA' },
+			{ label: 'Blog', href: 'https://ciennablog340661941.wordpress.com/' },
+			{
+				label: 'Poster',
+				href: 'https://alexandriaslattery.wordpress.com/wp-content/uploads/2022/10/internship-presentation.pdf',
+			},
+		],
+	},
+	{
+		title: 'MARY: A Food Bank Network',
+		context: 'Berea College',
+		description:
+			'Led 7 student developers to build a Flask and SQL platform connecting food banks, pantries, and distributors; owned UX and database design.',
+		tags: ['Python', 'Flask', 'SQL', 'Bootstrap', 'UX Design'],
+		links: [
+			{ label: 'Demo', href: 'https://youtu.be/2pWRgHneGoQ' },
+			{
+				label: 'Wireframe',
+				href: 'https://alexandriaslattery.wordpress.com/mary-a-food-bank-network-wireframe/',
+			},
+			{
+				label: 'User Journey',
+				href: 'https://alexandriaslattery.wordpress.com/mary-a-food-bank-network/',
+			},
+			{
+				label: 'Logical Model',
+				href: 'https://alexandriaslattery.wordpress.com/mary-a-food-bank-network-logical-model/',
+			},
+		],
+	},
+	{
+		title: 'Gratitude Together',
+		context: 'HCI Student Design Competition · Berea College',
+		description:
+			'Led a team of two to design and build a React and Node.js social app for an international HCI competition, aimed at increasing gratitude among college students.',
+		tags: ['React', 'Node.js', 'Figma', 'User Research'],
+		links: [
+			{
+				label: 'Write-up',
+				href: 'https://medium.com/berea-hcc/gratitude-together-793e123c7fb',
+			},
+			{
+				label: 'Wireframe',
+				href: 'https://www.figma.com/file/4JfHQmf2q5e6Wbxnueb9Q8/Gratitude-UX-Wire-Frame?node-id=107%3A4278',
+			},
+			{
+				label: 'Prototype',
+				href: 'https://www.figma.com/proto/4JfHQmf2q5e6Wbxnueb9Q8/Gratitude-UX-Wire-Frame?node-id=107%3A4278&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=107%3A4278',
+			},
+			{
+				label: 'Poster',
+				href: 'https://alexandriaslattery.wordpress.com/wp-content/uploads/2022/10/gratitude-technology-and-community.pdf',
+			},
+		],
 	},
 ];
 
@@ -135,7 +288,7 @@ export type Education = {
 	field: string;
 	institution: string;
 	location: string;
-	startDate: string;
+	startDate?: string;
 	endDate: string;
 	gpa?: string;
 	achievements: string[];
@@ -143,138 +296,171 @@ export type Education = {
 
 export const education: Education[] = [
 	{
-		degree: 'Bachelor of Science',
-		field: 'Mechanical Engineering',
-		institution: 'University Name',
-		location: 'City, Country',
-		startDate: 'Sep 2020',
-		endDate: 'Present',
-		gpa: '3.8/4.0',
+		degree: 'Bachelor of Arts',
+		field: 'Computer & Information Science',
+		institution: 'Berea College',
+		location: 'Berea, KY',
+		endDate: 'Dec 2022',
+		gpa: '3.75',
 		achievements: [
-			'Dean\'s List (All Semesters)',
-			'Academic Excellence Scholarship',
-			'Senior Design Project Award',
-		],
-	},
-	{
-		degree: 'High School Diploma',
-		field: 'Science and Mathematics',
-		institution: 'High School Name',
-		location: 'City, Country',
-		startDate: 'Sep 2016',
-		endDate: 'Jun 2020',
-		gpa: '4.0/4.0',
-		achievements: [
-			'Valedictorian',
-			'National Mathematics Competition Finalist',
-			'Science Fair Gold Medal',
+			'Summa Cum Laude',
+			'Full-tuition scholarship',
+			'Relevant coursework: Data Structures, Design & Analysis of Algorithms, Software Design & Implementation, Database Systems, Networking, Computational Intelligence, Discrete Mathematics, Applied Statistics, Team Study in UX Design',
+			'Previously a neuroscience student, with 3+ years of data collection and analysis experience',
 		],
 	},
 ];
 
-export type Certificate = {
+export type SkillGroup = {
 	title: string;
-	issuer: string;
-	date: string;
-	id?: string;
-	url?: string;
-	pdf?: string;
+	skills: string[];
 };
 
-export const certificates: Certificate[] = [
+export const skillGroups: SkillGroup[] = [
 	{
-		title: 'Engineering Professional Certification',
-		issuer: 'Professional Engineering Association',
-		date: 'Nov 2023',
-		id: 'CERT-12345',
-		url: '#',
-		pdf: '/certificates/sample.pdf',
+		title: 'Languages & Frameworks',
+		skills: [
+			'Java',
+			'TypeScript',
+			'JavaScript',
+			'Python',
+			'SQL',
+			'HTML/CSS',
+			'React',
+			'Spring Boot',
+			'Node.js',
+			'Express',
+			'Flask',
+		],
 	},
 	{
-		title: 'CAD Design Specialist',
-		issuer: 'Autodesk',
-		date: 'Jun 2023',
-		id: 'CERT-67890',
-		url: '#',
-		pdf: '/certificates/sample.pdf',
+		title: 'Platforms & Tools',
+		skills: [
+			'Apache Kafka',
+			'MongoDB',
+			'RESTful APIs',
+			'Microsoft Azure',
+			'OpenShift (OCP)',
+			'Splunk',
+			'Dynatrace',
+			'Git',
+			'GitHub',
+			'GitLab',
+			'CI/CD',
+			'JUnit',
+			'Jira',
+			'Figma',
+		],
 	},
 	{
-		title: 'Project Management Fundamentals',
-		issuer: 'Project Management Institute',
-		date: 'Mar 2023',
-		id: 'CERT-24680',
-		url: '#',
-		pdf: '/certificates/sample.pdf',
+		title: 'AI-Assisted Development',
+		skills: ['GitHub Copilot', 'Cursor (agent-led workflows)', 'Claude Code', 'Figma AI'],
+	},
+	{
+		title: 'Skills',
+		skills: [
+			'Full-Stack Development',
+			'Front-End Architecture',
+			'Responsive UI',
+			'Microservices',
+			'Event-Driven Architecture',
+			'Feature Flags',
+			'DevOps',
+			'DORA Metrics',
+			'Test Automation',
+			'UX Design (Figma)',
+			'Agile',
+		],
 	},
 ];
 
-export type Skill = {
-	name: string;
-	level: number; // 1-10
-	category: 'technical' | 'software' | 'soft' | 'language';
-};
-
-export const skills: Skill[] = [
-	// Technical Skills
-	{ name: 'Mechanical Design', level: 9, category: 'technical' },
-	{ name: 'Structural Analysis', level: 8, category: 'technical' },
-	{ name: 'Thermodynamics', level: 7, category: 'technical' },
-	{ name: 'Control Systems', level: 8, category: 'technical' },
-	{ name: 'Circuit Design', level: 6, category: 'technical' },
-
-	// Software Skills
-	{ name: 'MATLAB', level: 9, category: 'software' },
-	{ name: 'AutoCAD', level: 8, category: 'software' },
-	{ name: 'SolidWorks', level: 9, category: 'software' },
-	{ name: 'Python', level: 7, category: 'software' },
-	{ name: 'C++', level: 6, category: 'software' },
-	{ name: 'ANSYS', level: 8, category: 'software' },
-
-	// Soft Skills
-	{ name: 'Problem Solving', level: 9, category: 'soft' },
-	{ name: 'Team Leadership', level: 8, category: 'soft' },
-	{ name: 'Project Management', level: 7, category: 'soft' },
-	{ name: 'Technical Writing', level: 8, category: 'soft' },
-	{ name: 'Presentation', level: 7, category: 'soft' },
-
-	// Languages
-	{ name: 'English', level: 10, category: 'language' },
-	{ name: 'Spanish', level: 6, category: 'language' },
-	{ name: 'French', level: 4, category: 'language' },
-];
-
-export type BlogPost = {
+export type Article = {
 	title: string;
 	excerpt: string;
-	date: string;
-	author: string;
-	image: string;
-	slug: string;
+	source: string;
+	url: string;
 };
 
-export const blogPosts: BlogPost[] = [
+export const articles: Article[] = [
 	{
-		title: 'Advances in Renewable Energy Technologies',
-		excerpt: 'Exploring the latest innovations in renewable energy and their impact on sustainable development.',
-		date: 'Mar 15, 2024',
-		author: 'Your Name',
-		image: 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg',
-		slug: 'advances-in-renewable-energy',
+		title: 'Gratitude Together',
+		excerpt:
+			'A write-up of our HCI Student Design Competition prototype: combining technology and community to increase gratitude among college students.',
+		source: 'Berea HCC on Medium',
+		url: 'https://medium.com/berea-hcc/gratitude-together-793e123c7fb',
 	},
 	{
-		title: 'The Future of Robotics in Manufacturing',
-		excerpt: 'How robotics and automation are revolutionizing the manufacturing industry and creating new opportunities.',
-		date: 'Feb 22, 2024',
-		author: 'Your Name',
-		image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
-		slug: 'future-of-robotics-manufacturing',
+		title: 'Gratitude Together Project Blog',
+		excerpt:
+			'The design journey behind Gratitude Together, from surveying students on loneliness and connectedness to wireframes and prototypes.',
+		source: 'Medium',
+		url: 'https://medium.com/@cienna.a.slattery',
 	},
 	{
-		title: 'Sustainable Building Materials in Modern Construction',
-		excerpt: 'An analysis of eco-friendly building materials and their applications in contemporary architecture.',
-		date: 'Jan 10, 2024',
-		author: 'Your Name',
-		image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
-		slug: 'sustainable-building-materials',
+		title: 'Asset Tagger Internship Blog',
+		excerpt:
+			'Notes from my Abercrombie & Fitch Co. internship building a desktop app that creates ServiceNow asset records during laptop setup.',
+		source: 'WordPress',
+		url: 'https://ciennablog340661941.wordpress.com/',
+	},
+];
+
+export type GalleryItem = {
+	src: string;
+	alt: string;
+	category: 'Photography' | 'Digital Art';
+	width: number;
+	height: number;
+};
+
+export const gallery: GalleryItem[] = [
+	{
+		src: '/gallery/fairy-house.jpg',
+		alt: 'Miniature fairy house with a green shingled roof at the base of a mossy tree',
+		category: 'Photography',
+		width: 1600,
+		height: 1067,
+	},
+	{
+		src: '/gallery/collage.jpg',
+		alt: 'Digital collage of a figure whose head is made of a grid of sepia photographs',
+		category: 'Digital Art',
+		width: 1242,
+		height: 1551,
+	},
+	{
+		src: '/gallery/ducks-at-dusk.jpg',
+		alt: 'Two ducks in silhouette wading through rippling water at dusk',
+		category: 'Photography',
+		width: 1600,
+		height: 1066,
+	},
+	{
+		src: '/gallery/garden.jpg',
+		alt: 'Sunlit garden bed of millet, coleus, and orange flowers with a lens flare',
+		category: 'Photography',
+		width: 1600,
+		height: 1066,
+	},
+	{
+		src: '/gallery/butterfly-portrait.webp',
+		alt: 'Low-light portrait with a glowing blue butterfly on the cheek and bokeh lights behind',
+		category: 'Digital Art',
+		width: 2000,
+		height: 1333,
+	},
+	{
+		src: '/gallery/porch-portrait.jpg',
+		alt: 'Smiling portrait of a person in a patterned sweater seated in a wicker chair',
+		category: 'Photography',
+		width: 1600,
+		height: 1067,
+	},
+	{
+		src: '/gallery/pond-reflection.jpg',
+		alt: 'Golden sky and trees reflected in a still pond with ducks at the shore',
+		category: 'Photography',
+		width: 1600,
+		height: 1066,
 	},
 ];

@@ -1,40 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Github, Linkedin, MapPin, BookOpen, Mail } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/lib/constants';
 import { fadeIn, staggerContainer } from '@/lib/motion';
 
 export default function ContactPage() {
-	const [formState, setFormState] = useState({
-		name: '',
-		email: '',
-		subject: '',
-		message: '',
-	});
-
-	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-	) => {
-		setFormState({
-			...formState,
-			[e.target.name]: e.target.value,
-		});
-	};
-
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// Form submission logic would go here
-		console.log('Form submitted:', formState);
-		alert('Message sent successfully!');
-		setFormState({ name: '', email: '', subject: '', message: '' });
-	};
-
 	return (
 		<div className="py-16 md:py-24">
 			<div className="container">
@@ -50,7 +25,7 @@ export default function ContactPage() {
 					>
 						<h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
 						<p className="text-lg text-muted-foreground">
-							Have a question or want to work together? Feel free to reach out!
+							I'm open to remote full stack engineering roles. Reach out by email or on LinkedIn.
 						</p>
 					</motion.div>
 
@@ -61,66 +36,76 @@ export default function ContactPage() {
 									<h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 									<div className="space-y-4">
 										<div className="flex items-center">
-											<Phone className="h-5 w-5 text-primary mr-3" />
-											<p className="text-muted-foreground">+1 234 567 890</p>
-										</div>
-										<div className="flex items-center">
 											<Mail className="h-5 w-5 text-primary mr-3" />
-											<p className="text-muted-foreground">contact@example.com</p>
+											<Link
+												href={`mailto:${siteConfig.email}`}
+												className="text-muted-foreground hover:text-primary transition-colors break-all"
+											>
+												{siteConfig.email}
+											</Link>
 										</div>
 										<div className="flex items-center">
 											<MapPin className="h-5 w-5 text-primary mr-3" />
-											<p className="text-muted-foreground">City, Country</p>
+											<p className="text-muted-foreground">{siteConfig.location} · Open to remote</p>
+										</div>
+										<div className="flex items-center">
+											<Linkedin className="h-5 w-5 text-primary mr-3" />
+											<Link
+												href={siteConfig.links.linkedin}
+												target="_blank"
+												rel="noreferrer"
+												className="text-muted-foreground hover:text-primary transition-colors"
+											>
+												LinkedIn
+											</Link>
+										</div>
+										<div className="flex items-center">
+											<Github className="h-5 w-5 text-primary mr-3" />
+											<Link
+												href={siteConfig.links.github}
+												target="_blank"
+												rel="noreferrer"
+												className="text-muted-foreground hover:text-primary transition-colors"
+											>
+												github.com/AllieGal
+											</Link>
+										</div>
+										<div className="flex items-center">
+											<BookOpen className="h-5 w-5 text-primary mr-3" />
+											<Link
+												href={siteConfig.links.medium}
+												target="_blank"
+												rel="noreferrer"
+												className="text-muted-foreground hover:text-primary transition-colors"
+											>
+												Medium
+											</Link>
 										</div>
 									</div>
 								</CardContent>
 							</Card>
 						</motion.div>
 
-						<motion.div variants={fadeIn('left', 0.3)}>
-							<form onSubmit={handleSubmit} className="space-y-4">
-								<div>
-									<Input
-										placeholder="Your Name"
-										name="name"
-										value={formState.name}
-										onChange={handleChange}
-										required
-									/>
-								</div>
-								<div>
-									<Input
-										type="email"
-										placeholder="Your Email"
-										name="email"
-										value={formState.email}
-										onChange={handleChange}
-										required
-									/>
-								</div>
-								<div>
-									<Input
-										placeholder="Subject"
-										name="subject"
-										value={formState.subject}
-										onChange={handleChange}
-										required
-									/>
-								</div>
-								<div>
-									<Textarea
-										placeholder="Your Message"
-										name="message"
-										value={formState.message}
-										onChange={handleChange}
-										required
-										className="min-h-[150px]"
-									/>
-								</div>
-								<Button type="submit" className="w-full">
-									Send Message <Send className="ml-2 h-4 w-4" />
-								</Button>
-							</form>
+						<motion.div variants={fadeIn('left', 0.3)} className="flex">
+							<Card className="card-gradient w-full">
+								<CardContent className="p-6 h-full flex flex-col justify-center gap-4">
+									<h2 className="text-2xl font-semibold">Let's Connect</h2>
+									<p className="text-muted-foreground">
+										Interested in working together or have a question? Send me an email or a message
+										on LinkedIn and I'll get back to you.
+									</p>
+									<Button asChild>
+										<Link href={`mailto:${siteConfig.email}`}>
+											Email Me <Mail className="ml-2 h-4 w-4" />
+										</Link>
+									</Button>
+									<Button variant="outline" asChild>
+										<Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
+											Message Me on LinkedIn <Linkedin className="ml-2 h-4 w-4" />
+										</Link>
+									</Button>
+								</CardContent>
+							</Card>
 						</motion.div>
 					</div>
 				</motion.div>

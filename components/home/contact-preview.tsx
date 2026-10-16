@@ -1,36 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { SectionHeader } from '@/components/ui/section-header';
+import { siteConfig } from '@/lib/constants';
 import { fadeIn } from '@/lib/motion';
 
 export function ContactPreview() {
-	const [formState, setFormState] = useState({
-		name: '',
-		email: '',
-		message: '',
-	});
-
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		setFormState({
-			...formState,
-			[e.target.name]: e.target.value,
-		});
-	};
-
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// Form submission would be handled here
-		alert('Form submitted! This is a demo - no actual email is sent.');
-		setFormState({ name: '', email: '', message: '' });
-	};
-
 	return (
 		<section className="py-16 md:py-24 bg-muted/30">
 			<div className="container px-4">
@@ -45,42 +24,23 @@ export function ContactPreview() {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true }}
-					className="max-w-md mx-auto mt-10"
+					className="max-w-xl mx-auto mt-10 flex flex-col sm:flex-row gap-4 justify-center"
 				>
-					<form onSubmit={handleSubmit} className="space-y-4">
-						<div>
-							<Input
-								name="name"
-								placeholder="Your Name"
-								value={formState.name}
-								onChange={handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<Input
-								name="email"
-								type="email"
-								placeholder="Your Email"
-								value={formState.email}
-								onChange={handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<Textarea
-								name="message"
-								placeholder="Your Message"
-								value={formState.message}
-								onChange={handleChange}
-								required
-								className="min-h-[150px]"
-							/>
-						</div>
-						<Button type="submit" className="w-full">
-							Send Message <Send className="ml-2 h-4 w-4" />
-						</Button>
-					</form>
+					<Button size="lg" asChild>
+						<Link href={`mailto:${siteConfig.email}`}>
+							Email Me <Mail className="ml-2 h-4 w-4" />
+						</Link>
+					</Button>
+					<Button size="lg" variant="outline" asChild>
+						<Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
+							LinkedIn <Linkedin className="ml-2 h-4 w-4" />
+						</Link>
+					</Button>
+					<Button size="lg" variant="outline" asChild>
+						<Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+							GitHub <Github className="ml-2 h-4 w-4" />
+						</Link>
+					</Button>
 				</motion.div>
 			</div>
 		</section>

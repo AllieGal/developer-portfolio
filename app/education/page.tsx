@@ -27,7 +27,7 @@ export default function EducationPage() {
 						variants={fadeIn('down', 0.3)}
 						className="text-lg text-muted-foreground mb-12"
 					>
-						My academic journey and achievements in the field of engineering.
+						My academic background in computer science, with roots in neuroscience research.
 					</motion.p>
 
 					<div className="space-y-8">
@@ -58,7 +58,7 @@ export default function EducationPage() {
 											</div>
 											<div className="flex items-center text-muted-foreground">
 												<Calendar className="h-4 w-4 mr-2" />
-												{edu.startDate} - {edu.endDate}
+												{edu.startDate ? `${edu.startDate} - ${edu.endDate}` : `Graduated ${edu.endDate}`}
 											</div>
 										</div>
 

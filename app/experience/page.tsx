@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { Calendar, MapPin, CheckCircle2, ExternalLink } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { experiences } from '@/lib/constants';
@@ -28,7 +30,7 @@ export default function ExperiencePage() {
 						variants={fadeIn('down', 0.3)}
 						className="text-lg text-muted-foreground mb-12"
 					>
-						My journey through various roles and projects in the engineering field.
+						From research labs to enterprise e-commerce engineering.
 					</motion.p>
 
 					<div className="space-y-8">
@@ -58,7 +60,7 @@ export default function ExperiencePage() {
 										</div>
 
 										<div className="space-y-4">
-											<h3 className="text-lg font-semibold">Key Responsibilities</h3>
+											<h3 className="text-lg font-semibold">Highlights</h3>
 											<ul className="space-y-2">
 												{exp.description.map((item, i) => (
 													<li key={i} className="flex items-start">
@@ -79,6 +81,19 @@ export default function ExperiencePage() {
 												))}
 											</div>
 										</div>
+
+										{exp.links && exp.links.length > 0 && (
+											<div className="mt-6 flex flex-wrap gap-2">
+												{exp.links.map((link) => (
+													<Button key={link.href} size="sm" variant="outline" asChild>
+														<Link href={link.href} target="_blank" rel="noreferrer">
+															<ExternalLink className="h-4 w-4 mr-2" />
+															{link.label}
+														</Link>
+													</Button>
+												))}
+											</div>
+										)}
 									</CardContent>
 								</Card>
 							</motion.div>

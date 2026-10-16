@@ -2,11 +2,15 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowDownCircle } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { fadeIn, staggerContainer } from '@/lib/motion';
+
+const interests = ['Horseback riding', 'Volleyball', 'Travel', 'Photography', 'Gaming'];
 
 export default function AboutPage() {
 	return (
@@ -21,32 +25,48 @@ export default function AboutPage() {
 					<motion.div variants={fadeIn('right', 0.3)} className="space-y-6">
 						<h1 className="text-4xl font-bold">About Me</h1>
 						<p className="text-lg text-muted-foreground">
-							I am a passionate engineering student with a focus on innovation and problem-solving.
-							My academic journey has equipped me with strong technical skills and a deep understanding
-							of engineering principles.
+							I'm a full stack engineer specializing in scalable e-commerce solutions, passionate about
+							problem-solving, building solutions, and leadership. I'm currently driving AI-enabled
+							engineering practices and leading front-end architecture on the Discovery Services team at
+							Abercrombie &amp; Fitch Co.
 						</p>
 						<div className="space-y-4">
 							<h2 className="text-2xl font-semibold">My Journey</h2>
 							<p className="text-muted-foreground">
-								Throughout my academic career, I've been involved in various projects that have
-								helped me develop practical skills and theoretical knowledge. I believe in
-								continuous learning and staying updated with the latest technological advancements.
+								I started college studying neuroscience, spending more than three years collecting and
+								analyzing research data, before moving into computer science at Berea College. Since
+								graduating Summa Cum Laude in 2022, I've built event-driven Kafka microservices, migrated
+								front ends to React, and now lead front-end architecture and AI-assisted development on
+								my team.
 							</p>
 						</div>
+						<div className="space-y-3">
+							<h2 className="text-2xl font-semibold">Outside of Work</h2>
+							<div className="flex flex-wrap gap-2">
+								{interests.map((interest) => (
+									<Badge key={interest} variant="secondary">
+										{interest}
+									</Badge>
+								))}
+							</div>
+						</div>
 						<Button className="mt-6" asChild>
-							<a href="/cv.pdf" download>
-								Download CV <ArrowDownCircle className="ml-2 h-4 w-4" />
-							</a>
+							<Link href="/contact">
+								Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+							</Link>
 						</Button>
 					</motion.div>
 
-					<motion.div variants={fadeIn('left', 0.3)} className="relative h-[500px]">
+					<motion.div
+						variants={fadeIn('left', 0.3)}
+						className="relative h-[500px] rounded-lg overflow-hidden"
+					>
 						<Image
-							src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg"
-							alt="Professional photo"
+							src="/profile.jpg"
+							alt="Alexandria Slattery in front of the Golden Gate Bridge"
 							fill
-							className="object-cover rounded-lg"
-							sizes="(max-width: 768px) 100vw, 50vw"
+							className="object-cover object-[75%_30%]"
+							sizes="(max-width: 1024px) 100vw, 50vw"
 						/>
 					</motion.div>
 				</motion.div>
@@ -62,8 +82,8 @@ export default function AboutPage() {
 							<CardContent className="p-6">
 								<h3 className="text-xl font-semibold mb-4">Education</h3>
 								<p className="text-muted-foreground">
-									Currently pursuing a Bachelor's degree in Engineering with a focus on
-									practical applications and innovative solutions.
+									B.A. in Computer &amp; Information Science from Berea College, Summa Cum Laude with a
+									3.75 GPA on a full tuition scholarship.
 								</p>
 							</CardContent>
 						</Card>
@@ -74,8 +94,8 @@ export default function AboutPage() {
 							<CardContent className="p-6">
 								<h3 className="text-xl font-semibold mb-4">Experience</h3>
 								<p className="text-muted-foreground">
-									Gained valuable experience through internships and projects, working
-									with cutting-edge technologies and methodologies.
+									3+ years across Abercrombie &amp; Fitch Co. and HealthTech Solutions, from event-driven
+									Java services to React front ends and team-wide AI enablement.
 								</p>
 							</CardContent>
 						</Card>
@@ -86,8 +106,8 @@ export default function AboutPage() {
 							<CardContent className="p-6">
 								<h3 className="text-xl font-semibold mb-4">Skills</h3>
 								<p className="text-muted-foreground">
-									Proficient in various engineering tools and technologies, with a strong
-									foundation in problem-solving and analytical thinking.
+									Java, Spring Boot, Kafka, React, and TypeScript, backed by a strong focus on
+									engineering quality, DevOps metrics, and AI-driven development.
 								</p>
 							</CardContent>
 						</Card>

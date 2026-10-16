@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { BookOpen, ExternalLink } from 'lucide-react';
 
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { blogPosts } from '@/lib/constants';
+import { articles } from '@/lib/constants';
 import { fadeIn, staggerContainer } from '@/lib/motion';
 
 export default function BlogPage() {
@@ -23,46 +22,31 @@ export default function BlogPage() {
 						variants={fadeIn('down', 0.2)}
 						className="text-center mb-12"
 					>
-						<h1 className="text-4xl font-bold mb-4">Blog</h1>
+						<h1 className="text-4xl font-bold mb-4">Writing</h1>
 						<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-							Insights, experiences, and knowledge sharing from my engineering journey.
+							Project write-ups and blogs documenting my design and engineering process.
 						</p>
 					</motion.div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{blogPosts.map((post, index) => (
+						{articles.map((article, index) => (
 							<motion.div
 								key={index}
 								variants={fadeIn('up', 0.2 * index)}
 							>
-								<Card className="h-full card-gradient">
-									<div className="relative h-48">
-										<Image
-											src={post.image}
-											alt={post.title}
-											fill
-											className="object-cover rounded-t-lg"
-											sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-										/>
-									</div>
-									<CardContent className="p-6">
-										<div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-											<div className="flex items-center">
-												<Calendar className="h-4 w-4 mr-1" />
-												{post.date}
-											</div>
-											<div className="flex items-center">
-												<User className="h-4 w-4 mr-1" />
-												{post.author}
-											</div>
+								<Card className="h-full flex flex-col card-gradient">
+									<CardContent className="p-6 flex-grow">
+										<div className="flex items-center text-sm text-muted-foreground mb-4">
+											<BookOpen className="h-4 w-4 mr-1" />
+											{article.source}
 										</div>
-										<h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-										<p className="text-muted-foreground">{post.excerpt}</p>
+										<h2 className="text-xl font-semibold mb-2">{article.title}</h2>
+										<p className="text-muted-foreground">{article.excerpt}</p>
 									</CardContent>
 									<CardFooter className="p-6 pt-0">
 										<Button variant="outline" className="w-full" asChild>
-											<Link href={`/blog/${post.slug}`}>
-												Read More <ArrowRight className="ml-2 h-4 w-4" />
+											<Link href={article.url} target="_blank" rel="noreferrer">
+												Read <ExternalLink className="ml-2 h-4 w-4" />
 											</Link>
 										</Button>
 									</CardFooter>
