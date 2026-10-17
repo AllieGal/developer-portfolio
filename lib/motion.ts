@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion';
+import { type AnimationGeneratorType, Variants } from 'framer-motion';
 
 export const fadeIn = (direction: 'up' | 'down' | 'left' | 'right' = 'up', delay: number = 0): Variants => {
 	return {
@@ -64,7 +64,7 @@ export const cardVariants: Variants = {
 	},
 };
 
-export const slideIn = (direction: 'up' | 'down' | 'left' | 'right', type: string, delay: number, duration: number): Variants => {
+export const slideIn = (direction: 'up' | 'down' | 'left' | 'right', type: AnimationGeneratorType, delay: number, duration: number): Variants => {
 	return {
 		hidden: {
 			x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,

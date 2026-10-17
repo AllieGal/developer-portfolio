@@ -27,7 +27,7 @@ export default function RootLayout({
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
 					<div className="relative min-h-screen flex flex-col">
 						<Navbar />
-						<main className="flex-grow pt-16">{children}</main>
+						<main className="grow pt-16">{children}</main>
 						<Footer />
 					</div>
 				</ThemeProvider>
