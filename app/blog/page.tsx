@@ -35,7 +35,7 @@ export default function BlogPage() {
 								variants={fadeIn('up', 0.2 * index)}
 							>
 								<Card className="h-full flex flex-col card-gradient">
-									<CardContent className="p-6 flex-grow">
+									<CardContent className="p-6 grow">
 										<div className="flex items-center text-sm text-muted-foreground mb-4">
 											<BookOpen className="h-4 w-4 mr-1" />
 											{article.source}

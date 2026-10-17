@@ -9,7 +9,7 @@ import type { Project } from '@/lib/constants';
 export function ProjectCard({ project }: { project: Project }) {
 	return (
 		<Card className="flex flex-col h-full w-full card-gradient">
-			<CardContent className="flex-grow p-6">
+			<CardContent className="grow p-6">
 				<p className="text-sm text-primary mb-2">{project.context}</p>
 				<h3 className="font-bold text-xl mb-2">{project.title}</h3>
 				<p className="text-muted-foreground mb-4">{project.description}</p>

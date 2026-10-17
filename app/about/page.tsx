@@ -61,7 +61,7 @@ export default function AboutPage() {
 								))}
 							</div>
 						</div>
-						<Button className="mt-6" asChild>
+						<Button asChild>
 							<Link href="/contact">
 								Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
 							</Link>

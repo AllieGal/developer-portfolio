@@ -35,7 +35,7 @@ export function Navbar() {
 
 	return (
 		<motion.header
-			className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
+			className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-xs shadow-md' : 'bg-transparent'
 				}`}
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
