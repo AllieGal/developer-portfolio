@@ -25,7 +25,7 @@ export default function ContactPage() {
 					>
 						<h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
 						<p className="text-lg text-muted-foreground">
-							I'm open to remote software engineering roles. Reach out by email or on LinkedIn.
+							I&apos;m open to remote software engineering roles. Reach out by email or on LinkedIn.
 						</p>
 					</motion.div>
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
 						<motion.div variants={fadeIn('left', 0.3)} className="flex">
 							<Card className="card-gradient w-full">
 								<CardContent className="p-6 h-full flex flex-col justify-center gap-4">
-									<h2 className="text-2xl font-semibold">Let's Connect</h2>
+									<h2 className="text-2xl font-semibold">Let&apos;s Connect</h2>
 									<p className="text-muted-foreground">
 										Interested in working together or have a question? Send me an email or LinkedIn message,
 										and I&apos;ll get back to you soon.
