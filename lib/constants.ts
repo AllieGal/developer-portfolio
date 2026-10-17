@@ -336,6 +336,8 @@ export const skillGroups: SkillGroup[] = [
 			'Git (GitHub, GitLab)',
 			'CI/CD',
 			'JUnit',
+			'Jest',
+			'Playwright',
 			'Jira',
 			'IntelliJ',
 			'ServiceNow',
