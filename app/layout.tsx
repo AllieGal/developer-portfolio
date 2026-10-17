@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { siteConfig } from '@/lib/constants';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 						<Footer />
 					</div>
 				</ThemeProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
