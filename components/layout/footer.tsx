@@ -55,7 +55,11 @@ export function Footer() {
 						<div className="mt-6 flex flex-wrap gap-3">
 							{socialLinks.map((link, index) => (
 								<Button key={index} size="icon" variant="outline" asChild>
-									<Link href={link.href} aria-label={link.label} target="_blank" rel="noreferrer">
+									<Link
+										href={link.href}
+										aria-label={link.label}
+										{...(link.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
+									>
 										{link.icon}
 									</Link>
 								</Button>

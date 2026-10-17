@@ -24,11 +24,11 @@ export default function BlogPage() {
 					>
 						<h1 className="text-4xl font-bold mb-4">Writing</h1>
 						<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-							Project write-ups and blogs documenting my design and engineering process.
+							Early project write-ups and blogs documenting my research, design, and engineering process.
 						</p>
 					</motion.div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 						{articles.map((article, index) => (
 							<motion.div
 								key={index}

@@ -30,7 +30,7 @@ export default function ExperiencePage() {
 						variants={fadeIn('down', 0.3)}
 						className="text-lg text-muted-foreground mb-12"
 					>
-						From research labs to enterprise e-commerce engineering.
+						Enterprise e-commerce engineering to early research experiences.
 					</motion.p>
 
 					<div className="space-y-8">

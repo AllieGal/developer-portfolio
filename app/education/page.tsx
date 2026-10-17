@@ -27,7 +27,7 @@ export default function EducationPage() {
 						variants={fadeIn('down', 0.3)}
 						className="text-lg text-muted-foreground mb-12"
 					>
-						My academic background in computer science, with roots in neuroscience research.
+						An academic background in computer science, with roots in neuroscience and psychology.
 					</motion.p>
 
 					<div className="space-y-8">

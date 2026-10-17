@@ -64,18 +64,18 @@ export type Experience = {
 
 export const experiences: Experience[] = [
 	{
-		title: 'Java Developer (Leadership Development Program)',
+		title: 'Full Stack Engineer (Leadership Development Program)',
 		company: 'Abercrombie & Fitch Co. · Discovery Services',
 		location: 'Remote',
 		startDate: 'Jul 2023',
 		endDate: 'Present',
 		description: [
-			'Lead front-end architecture and development of an internal tool consolidating feature-flag management, replacing a third-party vendor; projected to save ~$250K/year in licensing.',
+			'Leading front-end architecture and development of an internal tool consolidating feature-flag management, projected to save ~$250K/year in licensing costs.',
 			'Engineered event-driven Spring Boot microservices consuming millions of daily e-commerce events via Kafka, monitored with Splunk dashboards and Dynatrace.',
 			'Independently upgraded the legacy Sorting Rules Manager to Java 17 (Spring Boot, Kafka) ahead of its migration to OpenShift.',
-			'Led the team\'s early adoption of Org Owned Quality, an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% DORA metrics adoption and rolled out linting, mutation testing, and CI/CD across repositories.',
-			'Drove AI-assisted development: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide in a high-profile meeting and to the team.',
-			'Lead the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
+			'Led the team\'s early adoption of Org Owned Quality, an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% team adoption of DORA Metrics; rolled out linting, mutation testing, and CI/CD improvements across repositories.',
+			'Led AI-driven development: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide.',
+			'Leading the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing performance monitoring.',
 		],
 		technologies: [
 			'Java',
@@ -99,7 +99,7 @@ export const experiences: Experience[] = [
 		description: [
 			'Independently migrated the MCO-Tracker UI from Pug to a responsive React interface for a web app holding millions of MCO and state-government records, improving performance and user experience.',
 			'Owned front-end architecture and UI/UX, integrating with the Express and MongoDB backend.',
-			'Collaborated with international teams to keep delivery on track.',
+			'Collaborated with international teams to ensure smooth integrations.',
 		],
 		technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
 	},
@@ -132,7 +132,6 @@ export const experiences: Experience[] = [
 				label: 'Research Proposal',
 				href: 'https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:80fdc8d1-28ac-3cd5-a9dc-2fbf4ebacacf',
 			},
-			{ label: 'Program', href: 'https://www.med.upenn.edu/idealresearch/suip/' },
 		],
 	},
 	{
@@ -148,10 +147,6 @@ export const experiences: Experience[] = [
 		technologies: ['Gene Expression Analysis', 'Data Analysis', 'Scientific Presentation'],
 		links: [
 			{ label: 'Presentation', href: 'https://youtu.be/fiDlwpctyDs' },
-			{
-				label: 'Program',
-				href: 'https://neurosurgery.uw.edu/education/summer-student-programs/student-presentations',
-			},
 		],
 	},
 ];
@@ -181,8 +176,8 @@ export const projects: Project[] = [
 		title: 'Team AI Enablement',
 		context: 'Abercrombie & Fitch Co. · 2025 – present',
 		description:
-			'Drove AI-assisted development on my team: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide.',
-		tags: ['GitHub Copilot', 'Cursor', 'Figma AI', 'Technical Training'],
+			'Led AI-driven development on my team: rolled out GitHub Copilot through trainings, authored Cursor skills, orchestrated agentic workflows, and presented on ensuring AI quality at scale to senior engineers org-wide.',
+		tags: ['Agentic Workflows', 'GitHub Copilot', 'Cursor', 'Figma AI', 'Technical Training'],
 	},
 	{
 		title: 'Dataload Consumer',
@@ -195,14 +190,14 @@ export const projects: Project[] = [
 		title: 'AI Harness Adoption',
 		context: 'Abercrombie & Fitch Co. · 2026',
 		description:
-			'Leading the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
+			'Leading the rollout of an internal AI Harness across team repositories, owned from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
 		tags: ['AI Tooling', 'Cursor', 'Technical Planning'],
 	},
 	{
 		title: 'Org Owned Quality Adoption',
 		context: 'Abercrombie & Fitch Co. · 2024 – 2026',
 		description:
-			'Led the team\'s early adoption of an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% DORA metrics adoption and rolled out linting, mutation testing, and CI/CD across repositories.',
+			'Led the team\'s early adoption of an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% team adoption of DORA Metrics and rolled out linting, mutation testing, and CI/CD improvements across repositories.',
 		tags: ['DORA Metrics', 'CI/CD', 'Mutation Testing', 'Linting'],
 	},
 	{
@@ -216,8 +211,8 @@ export const projects: Project[] = [
 		title: 'MCO-Tracker',
 		context: 'HealthTech Solutions · 2023',
 		description:
-			'Independently migrated the UI from Pug to a responsive React interface for a web app holding millions of MCO and state-government records, improving performance and user experience.',
-		tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+			'Independently migrated the UI from Pug to a responsive React interface for a web app holding millions of MCO and state-government records, improving performance and user experience. Integrated the React front end with the Express and MongoDB backend through RESTful APIs.',
+		tags: ['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
 	},
 	{
 		title: 'Asset Tagger',
@@ -228,10 +223,6 @@ export const projects: Project[] = [
 		links: [
 			{ label: 'Video', href: 'https://youtu.be/6DF0tZZo1xA' },
 			{ label: 'Blog', href: 'https://ciennablog340661941.wordpress.com/' },
-			{
-				label: 'Poster',
-				href: 'https://alexandriaslattery.wordpress.com/wp-content/uploads/2022/10/internship-presentation.pdf',
-			},
 		],
 	},
 	{
@@ -275,10 +266,6 @@ export const projects: Project[] = [
 				label: 'Prototype',
 				href: 'https://www.figma.com/proto/4JfHQmf2q5e6Wbxnueb9Q8/Gratitude-UX-Wire-Frame?node-id=107%3A4278&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=107%3A4278',
 			},
-			{
-				label: 'Poster',
-				href: 'https://alexandriaslattery.wordpress.com/wp-content/uploads/2022/10/gratitude-technology-and-community.pdf',
-			},
 		],
 	},
 ];
@@ -306,7 +293,7 @@ export const education: Education[] = [
 			'Summa Cum Laude',
 			'Full-tuition scholarship',
 			'Relevant coursework: Data Structures, Design & Analysis of Algorithms, Software Design & Implementation, Database Systems, Networking, Computational Intelligence, Discrete Mathematics, Applied Statistics, Team Study in UX Design',
-			'Previously a neuroscience student, with 3+ years of data collection and analysis experience',
+			'Previously a neuroscience student, with 3+ years of experience in research and analysis',
 		],
 	},
 ];
@@ -331,6 +318,9 @@ export const skillGroups: SkillGroup[] = [
 			'Node.js',
 			'Express',
 			'Flask',
+			'PrimeReact',
+			'Vite',
+			'Bootstrap',
 		],
 	},
 	{
@@ -343,18 +333,17 @@ export const skillGroups: SkillGroup[] = [
 			'OpenShift (OCP)',
 			'Splunk',
 			'Dynatrace',
-			'Git',
-			'GitHub',
-			'GitLab',
+			'Git (GitHub, GitLab)',
 			'CI/CD',
 			'JUnit',
 			'Jira',
-			'Figma',
+			'IntelliJ',
+			'ServiceNow',
 		],
 	},
 	{
-		title: 'AI-Assisted Development',
-		skills: ['GitHub Copilot', 'Cursor (agent-led workflows)', 'Claude Code', 'Figma AI'],
+		title: 'AI-Driven Development',
+		skills: ['Agentic Workflows', 'GitHub Copilot', 'Cursor', 'Claude Code', 'Figma AI'],
 	},
 	{
 		title: 'Skills',
@@ -368,7 +357,29 @@ export const skillGroups: SkillGroup[] = [
 			'DevOps',
 			'DORA Metrics',
 			'Test Automation',
-			'UX Design (Figma)',
+			'Mutation Testing',
+			'Linting',
+			'Data Engineering',
+			'Data Flow Optimization',
+		],
+	},
+	{
+		title: 'Design',
+		skills: [
+			'UI Design',
+			'Figma',
+			'Wireframing',
+			'User Research',
+			'User Testing',
+		],
+	},
+	{
+		title: 'Ways of Working',
+		skills: [
+			'Cross-Functional Collaboration',
+			'Technical Documentation',
+			'Requirements Gathering',
+			'Cross-Team QA Coordination',
 			'Agile',
 		],
 	},
@@ -383,14 +394,7 @@ export type Article = {
 
 export const articles: Article[] = [
 	{
-		title: 'Gratitude Together',
-		excerpt:
-			'A write-up of our HCI Student Design Competition prototype: combining technology and community to increase gratitude among college students.',
-		source: 'Berea HCC on Medium',
-		url: 'https://medium.com/berea-hcc/gratitude-together-793e123c7fb',
-	},
-	{
-		title: 'Gratitude Together Project Blog',
+		title: 'Gratitude Together Project Personal Blog',
 		excerpt:
 			'The design journey behind Gratitude Together, from surveying students on loneliness and connectedness to wireframes and prototypes.',
 		source: 'Medium',

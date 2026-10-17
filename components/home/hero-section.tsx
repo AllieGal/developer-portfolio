@@ -73,8 +73,8 @@ export function HeroSection() {
 						variants={fadeIn('up', 0.5)}
 						className="mt-6 text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto"
 					>
-						I build scalable e-commerce solutions and lead front-end architecture and AI-assisted
-						development on the Discovery Services team at Abercrombie &amp; Fitch Co.
+						I build scalable e-commerce solutions and lead both front-end architecture and AI-driven
+						development practices on the Discovery Services team at Abercrombie &amp; Fitch Co.
 					</motion.p>
 
 					<motion.div

@@ -16,7 +16,7 @@ export function AboutPreview() {
 			<div className="container px-4">
 				<SectionHeader
 					title="About Me"
-					description="A full stack engineer passionate about problem-solving, building solutions, and leadership."
+					description="A full stack engineer passionate about turning business problems into technical solutions and helping teams grow."
 				/>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
@@ -46,9 +46,9 @@ export function AboutPreview() {
 						<h3 className="text-2xl font-bold mb-4">Full Stack Engineer</h3>
 						<p className="text-muted-foreground mb-6">
 							I specialize in scalable e-commerce solutions. At Abercrombie &amp; Fitch Co., I lead
-							front-end architecture for an internal feature-flag management tool, drive AI-assisted
-							development on my team, and have built event-driven microservices consuming millions of
-							e-commerce events a day.
+							front-end architecture for an internal feature-flag management tool and AI-driven
+							development within my team. I&apos;ve also built event-driven microservices consuming
+							millions of e-commerce events a day.
 						</p>
 
 						<div className="grid grid-cols-2 gap-4 mb-6">

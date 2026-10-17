@@ -25,19 +25,30 @@ export default function AboutPage() {
 					<motion.div variants={fadeIn('right', 0.3)} className="space-y-6">
 						<h1 className="text-4xl font-bold">About Me</h1>
 						<p className="text-lg text-muted-foreground">
-							I'm a full stack engineer specializing in scalable e-commerce solutions, passionate about
-							problem-solving, building solutions, and leadership. I'm currently driving AI-enabled
-							engineering practices and leading front-end architecture on the Discovery Services team at
-							Abercrombie &amp; Fitch Co.
+							Hey there! I&apos;m a versatile full stack engineer specializing in scalable e-commerce
+							solutions. I&apos;m passionate about turning business problems into technical solutions and
+							helping the people around me grow. Right now I&apos;m leading front-end architecture and
+							AI-driven development on the Discovery Services team at Abercrombie &amp; Fitch Co.
 						</p>
 						<div className="space-y-4">
 							<h2 className="text-2xl font-semibold">My Journey</h2>
 							<p className="text-muted-foreground">
-								I started college studying neuroscience, spending more than three years collecting and
-								analyzing research data, before moving into computer science at Berea College. Since
-								graduating Summa Cum Laude in 2022, I've built event-driven Kafka microservices, migrated
-								front ends to React, and now lead front-end architecture and AI-assisted development on
-								my team.
+								Early in college, I was a passionate neuroscience student. I was incredibly interested in the
+								study and visualization of the neural pathways influencing perception. I spent my first two
+								years participating in research projects and learning from professionals in the field.
+							</p>
+							<p className="text-muted-foreground">
+								During my junior year, I had my first coding experience and fell in love. I was fascinated not
+								only by how applications on a computer work, but also by the prospect that I could build
+								whatever I wanted using code. I switched to computer science while continuing my work as a
+								neuroscience TA.
+							</p>
+							<p className="text-muted-foreground">
+								Since graduating Summa Cum Laude in 2022, I&apos;ve built up a reservoir of experiences that
+								have given me a strong, comprehensive, and multidisciplinary background in software
+								engineering. I have often been called a &quot;go-getter,&quot; and I hope this portfolio makes
+								clear that I am not only an ambitious self-starter, but also action-oriented, resourceful, and
+								well suited to driving projects and people.
 							</p>
 						</div>
 						<div className="space-y-3">
@@ -94,7 +105,7 @@ export default function AboutPage() {
 							<CardContent className="p-6">
 								<h3 className="text-xl font-semibold mb-4">Experience</h3>
 								<p className="text-muted-foreground">
-									3+ years across Abercrombie &amp; Fitch Co. and HealthTech Solutions, from event-driven
+									3+ years across Abercrombie &amp; Fitch Co. and HealthTech Solutions, with roles ranging from event-driven
 									Java services to React front ends and team-wide AI enablement.
 								</p>
 							</CardContent>
@@ -104,11 +115,17 @@ export default function AboutPage() {
 					<motion.div variants={fadeIn('up', 0.3)}>
 						<Card className="h-full card-gradient">
 							<CardContent className="p-6">
-								<h3 className="text-xl font-semibold mb-4">Skills</h3>
+								<h3 className="text-xl font-semibold mb-4">Top Skills</h3>
 								<p className="text-muted-foreground">
-									Java, Spring Boot, Kafka, React, and TypeScript, backed by a strong focus on
-									engineering quality, DevOps metrics, and AI-driven development.
+									Java, Spring Boot, Kafka, React, and TypeScript, with a focus on engineering
+									quality, AI-driven development, and UI design.
 								</p>
+								<Link
+									href="/skills"
+									className="inline-flex items-center mt-4 text-sm font-medium text-primary hover:underline"
+								>
+									See all skills <ArrowRight className="ml-1 h-4 w-4" />
+								</Link>
 							</CardContent>
 						</Card>
 					</motion.div>

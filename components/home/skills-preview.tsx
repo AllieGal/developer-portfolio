@@ -20,7 +20,7 @@ export function SkillsPreview() {
 			<div className="container px-4">
 				<SectionHeader
 					title="Technical Skills"
-					description="Core languages and frameworks I work with every day."
+					description="Core languages and frameworks I've worked with"
 				/>
 
 				<motion.div
