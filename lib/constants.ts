@@ -4,7 +4,7 @@ export const siteConfig = {
 	role: 'Full Stack Engineer',
 	location: 'Philadelphia, PA',
 	description:
-		'Full stack engineer specializing in scalable e-commerce solutions, passionate about problem-solving, building solutions, and leadership.',
+		'Full stack engineer specializing in scalable e-commerce solutions, passionate about solving buisness problems through technology and leadership.',
 	mainNav: [
 		{
 			title: 'Home',

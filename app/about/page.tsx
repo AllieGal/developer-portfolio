@@ -26,8 +26,8 @@ export default function AboutPage() {
 						<h1 className="text-4xl font-bold">About Me</h1>
 						<p className="text-lg text-muted-foreground">
 							Hey there! I&apos;m a versatile full stack engineer specializing in scalable e-commerce
-							solutions. I&apos;m passionate about turning business problems into technical solutions and
-							helping the people around me grow. Right now I&apos;m leading front-end architecture and
+							solutions. I&apos;m passionate about building high-quality technical solutions and
+							uniting teams on a shared goal. Right now I&apos;m leading front-end architecture and
 							AI-driven development on the Discovery Services team at Abercrombie &amp; Fitch Co.
 						</p>
 						<div className="space-y-4">
@@ -46,9 +46,9 @@ export default function AboutPage() {
 							<p className="text-muted-foreground">
 								Since graduating Summa Cum Laude in 2022, I&apos;ve built up a reservoir of experiences that
 								have given me a strong, comprehensive, and multidisciplinary background in software
-								engineering. I have often been called a &quot;go-getter,&quot; and I hope this portfolio makes
-								clear that I am not only an ambitious self-starter, but also action-oriented, resourceful, and
-								well suited to driving projects and people.
+								engineering. I have often been called a &quot;go-getter,&quot;, bringing initative and a results-driven 
+								mindset to every challenge. Through this portfolio, you will find that I am not only a self-starter,
+								but I am also known for being action-oriented, resourceful, and proactive in driving projects forward and leading by example.
 							</p>
 						</div>
 						<div className="space-y-3">
