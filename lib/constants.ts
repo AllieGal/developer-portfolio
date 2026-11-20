@@ -169,7 +169,7 @@ export const projects: Project[] = [
 		title: 'Feature-Flag Management Tool',
 		context: 'Abercrombie & Fitch Co. · 2025 – present',
 		description:
-			'Leading front-end architecture and development of an internal tool consolidating feature-flag management and replacing a third-party vendor; projected to save ~$250K/year in licensing.',
+			'Leading front-end architecture and development of an internal tool consolidating feature-flag management; projected to save over $200K/year in licensing.',
 		tags: ['React', 'TypeScript', 'PrimeReact', 'Vite', 'REST APIs', 'Figma'],
 	},
 	{
@@ -190,22 +190,22 @@ export const projects: Project[] = [
 		title: 'AI Harness Adoption',
 		context: 'Abercrombie & Fitch Co. · 2026',
 		description:
-			'Leading the rollout of an internal AI Harness across team repositories, owned from cross-functional discovery to build-ready stories with ongoing monitoring defined.',
+			'Leading the rollout of an internal AI Harness: drove the initial cross-functional discovery and creation of build-ready stories; ongoing monitoring and rolling deployments planned',
 		tags: ['AI Tooling', 'Cursor', 'Technical Planning'],
 	},
 	{
-		title: 'Org Owned Quality Adoption',
+		title: 'Engineering Quality Adoption',
 		context: 'Abercrombie & Fitch Co. · 2024 – 2026',
 		description:
-			'Led the team\'s early adoption of an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% team adoption of DORA Metrics and rolled out linting, mutation testing, and CI/CD improvements across repositories.',
+			'Led my team’s early adoption of the internal engineering quality initiative, increasing my team’s score from 0% adoption to 65.3%; drove 100% team adoption of DORA Metrics and rolled out linting, mutation testing, and CI/CD improvements across repositories.',
 		tags: ['DORA Metrics', 'CI/CD', 'Mutation Testing', 'Linting'],
 	},
 	{
-		title: 'Sorting Rules Manager Java 17 Upgrade',
+		title: 'Rules Manager Java 17 Upgrade',
 		context: 'Abercrombie & Fitch Co. · 2024',
 		description:
-			'Independently upgraded the legacy Sorting Rules Manager to Java 17 (Spring Boot, Kafka) ahead of its migration to OpenShift.',
-		tags: ['Java 17', 'Spring Boot', 'Kafka', 'CI/CD', 'OpenShift'],
+			'Independently upgraded a legacy rules manager application to Java 17 ahead of its migration to OpenShift.',
+		tags: ['Java 17', 'Spring Boot', 'CI/CD', 'OpenShift'],
 	},
 	{
 		title: 'MCO-Tracker',
