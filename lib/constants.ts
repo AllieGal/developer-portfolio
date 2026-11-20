@@ -70,10 +70,10 @@ export const experiences: Experience[] = [
 		startDate: 'Jul 2023',
 		endDate: 'Present',
 		description: [
-			'Leading front-end architecture and development of an internal tool consolidating feature-flag management, projected to save ~$250K/year in licensing costs.',
+			'Leading front-end architecture and development of an internal tool consolidating feature-flag management, projected to save over $200K/year in licensing costs.',
 			'Engineered event-driven Spring Boot microservices consuming millions of daily e-commerce events via Kafka, monitored with Splunk dashboards and Dynatrace.',
-			'Independently upgraded the legacy Sorting Rules Manager to Java 17 (Spring Boot, Kafka) ahead of its migration to OpenShift.',
-			'Led the team\'s early adoption of Org Owned Quality, an org-wide engineering quality initiative, raising its score from 0 to 1.96 of 3; drove 100% team adoption of DORA Metrics; rolled out linting, mutation testing, and CI/CD improvements across repositories.',
+			'Independently upgraded a legacy rules manager application to Java 17 ahead of its migration to OpenShift.',
+			'Led my team\'s early adoption of the internal engineering quality initiative, raising its score from 0% adoption to 65.3%; drove 100% team adoption of DORA Metrics; rolled out linting, mutation testing, and CI/CD improvements across repositories.',
 			'Led AI-driven development: rolled out GitHub Copilot through trainings, authored Cursor skills, and presented on ensuring AI quality at scale to senior engineers org-wide.',
 			'Leading the rollout of an internal AI Harness across team repositories, from cross-functional discovery to build-ready stories with ongoing performance monitoring.',
 		],
@@ -87,7 +87,7 @@ export const experiences: Experience[] = [
 			'PrimeReact',
 			'Vite',
 			'REST APIs',
-			'OpenShift (OCP)',
+			'Azure Kubernetes Service (AKS)',
 		],
 	},
 	{
